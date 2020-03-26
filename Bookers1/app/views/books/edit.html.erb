@@ -1,0 +1,31 @@
+<!-- CSS読み込み -->
+<head>
+<%= stylesheet_link_tag 'edit' %>
+</head>
+
+<h1>Editing Book</h1>
+<body>
+	<% if @book.present? %>
+
+		<%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
+
+		    <p>Title</p>
+		    <%= f.text_field :title %>
+		    <p>Body</p>
+		    <%= f.text_area :body %>
+		    <p>
+		    <%= f.submit 'update Book' %>
+			</p>
+
+		<% end %>
+		<p>
+		<u><%= link_to 'Show', show_path(@book.id) %></u>
+		|
+		<u><%= link_to 'Back', '/books' %></u>
+		</p>
+
+	<% else %>
+	<p>Title and Body can't be blank.</p>
+	<%= link_to 'Back', '/books' %>
+	<% end %>
+</body>
