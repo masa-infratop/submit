@@ -289,7 +289,7 @@ header {
 
 .MyName {
 	margin-top: 0;
-	margin: 20px 0 5px 0;
+	margin: 0 0 5px 0;
 	font-size: 20px;
 	color: #000000;
 }
@@ -358,7 +358,7 @@ header {
 }
 
 .info-title {
-	margin: 20px 0 5px 0;
+	margin: 0 0 5px 0;
 	font-size: 20px;
 	color: #000000;
 }
